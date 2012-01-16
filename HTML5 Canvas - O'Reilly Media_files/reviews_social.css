@@ -1,0 +1,240 @@
+/* power reviews */
+
+#noReviews {padding: 8px 0 0 0 !important; width: 170px !important;}
+#noReviews, #hasReviews {display: block;}
+#noReviews a {color: #207cc1 !important; text-decoration: none !important;}
+#hasReviews a {color: #207cc1 !important; text-decoration: none !important;}
+#noReviews{clear: left;float: left;}
+
+.pr-snippet {
+clear: left;
+float: left;
+overflow: visible;
+width: 117px;
+}
+
+.pr-snippet .pr-snippet-wrapper p {
+display: none;
+}
+
+.pr-snippet .pr-clear {
+clear: none;
+}
+
+.pr-snippet .pr-snippet-review-count {
+display: none;
+margin:0;
+padding:0;
+position:relative;
+font-size: 100%;
+line-height: 20px;
+}
+
+.pr-snippet .pr-snippet-stars {
+background: none;
+border: none;
+float:left;
+margin-right: 3px;
+padding: 2px 0 0;
+margin: 5px 0;
+}
+
+.pr-snippet .pr-snippet-read-write a.pr-snippet-link {
+color:#00f;
+}
+
+.pr-snippet .pr-snippet-wrapper {
+background: none;
+border: none;
+padding: 0;
+width: auto;
+}
+
+.pr-snippet .pr-snippet-stars .pr-stars-small {
+float:left;
+height:15px;
+line-height:15px;
+width:83px;
+}
+
+.pr-snippet .pr-stars-small {
+height:16px;
+line-height:16px;
+width:83px;
+}
+
+.pr-snippet .pr-stars {
+background-repeat:no-repeat;
+height:1.25em;
+line-height:1.25em;
+margin:0 0.25em 0 0;
+padding:0;
+position:relative;
+width:7em;
+}
+
+.pr-snippet .pr-snippet-read-write {
+clear: left;
+border: none;
+font-size: 100%;
+margin: 0;
+padding: 3px 0 2px;
+text-align: left;
+display: block;
+float: left;
+width: 210px;
+line-height: 11px;
+}
+
+.pr-snippet .pr-snippet-read-reviews {
+float: left;
+padding: 0 10px 0 0;
+border-right: 1px solid #CCC;
+}
+
+.pr-snippet .pr-snippet-write-review {
+float:left;
+padding: 0 0 0 10px;
+}
+
+.pr-review-engine .pr-snapshot {
+margin-top: 11px;
+}
+
+.pr-review-engine .pr-snapshot-no-ratings {
+text-align: left;
+}
+
+.pr-review-engine .pr-snapshot-head {
+display: none;
+}
+
+.pr-review-engine .pr-write-review-link span {
+color:#0000FF;
+}
+
+.pr-review-engine .pr-contents-wrapper {
+margin-bottom: 11px;
+}
+
+.pr-review-engine .pr-snapshot-body, .pr-review-engine .pr-contents, .pr-review-engine .pr-review-sort, .pr-review-engine .pr-snapshot-body-wrapper, .pr-review-engine .pr-contents-wrapper {
+background: none;
+border: none;
+padding: 0 0 0 0;
+}
+
+.pr-review-engine .pr-review-sort-wrapper {
+padding: 0 0 5px;
+}
+
+.pr-review-engine .pr-snapshot-write-review {
+background-image: url(http://oreilly.com/images/icons/arrow.gif);
+padding: 12px 0 12px 12px;
+}
+
+.pr-review-engine .pr-review-rating-wrapper {
+float:right;
+width:100%;
+}
+
+.pr-review-engine .pr-review-rating .pr-rating {
+margin-right: 7px;
+}
+
+.pr-review-engine .pr-review-author-info-wrapper {
+margin: 0;
+}
+
+.pr-review-engine .pr-review-author-date {
+padding: 1px 4px;
+font-size: 100%;
+background: transparent;
+border: none;
+}
+
+.pr-review-engine .pr-review-author-affinity-wrapper {
+margin: 0;
+}
+
+.pr-review-engine .pr-review-author-badge-wrapper {
+margin-top: 1px;
+}
+
+.pr-review-engine .pr-review-rating-headline {
+font-size: 12px;
+}
+
+.pr-review-engine .pr-review-main-wrapper {
+float:right;
+width:83%;
+}
+
+.pr-review-engine .pr-review-wrap {
+padding-bottom: 0;
+margin-bottom: 7px;
+}
+
+.pr-review-engine .pr-review-author {
+width:16%;
+}
+
+.pr-review-engine .pr-snapshot-rating-wrapper {
+padding: 0;
+}
+
+.pr-review-engine .pr-attribute-value {
+margin-top: 0;
+}
+
+.pr-review-engine .pr-review-text .pr-comments-header {
+display: none;
+}
+
+.pr-review-engine .pr-comments {
+margin: 16px 0;
+}
+
+.pr-review-engine .pr-snapshot-footer {
+padding: 0;
+}
+
+.pr-review-engine .pr-nav-back-to-top {
+display: none;
+}
+
+.pr-review-engine .pr-review-author-affinities span {
+word-wrap: break-word;
+}
+
+.brandName {
+display: none;
+}
+
+
+/* Facebook & Twitter */
+
+.social {
+float: left;
+height: 20px;
+position: relative;
+margin: 5px 0;
+}
+
+.social .retweet {
+left: 0;
+position: absolute;
+top: 0;
+}
+
+.social .like {
+left: 180px;
+position: absolute;
+top: 0;
+} 
+.social .plus {
+position: absolute; 
+    left: 107px;
+    top: 0;
+    width: 82px;
+height: 20px; 
+}

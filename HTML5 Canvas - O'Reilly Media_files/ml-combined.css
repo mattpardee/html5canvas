@@ -1,0 +1,1795 @@
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 3.0.0pr2
+*/
+/* reset */
+.orm {color:#222;background:#FFF;}.orm,.orm div,.orm dl,.orm dt,.orm dd,.orm ul,.orm ol,.orm li,.orm h1,.orm h2,.orm h3,.orm h4,.orm h5,.orm h6,.orm pre,.orm code,.orm form,.orm fieldset,.orm legend,.orm input,.orm textarea,.orm p,.orm blockquote,.orm th,.orm td {margin:0;padding:0;}.orm table {border-collapse:collapse;border-spacing:0;}.orm fieldset,.orm img {border:0;}.orm address,.orm caption,.orm cite,.orm code,.orm dfn,.orm em,.orm strong,.orm th,.orm var {font-style:normal;font-weight:normal;}.orm li {list-style:none;}.orm caption,.orm th {text-align:left;}.orm h1,.orm h2,.orm h3,.orm h4,.orm h5,.orm h6 {font-size:100%;font-weight:normal;}.orm q:before,.orm q:after {content:'';}.orm abbr,.orm acronym {border:0;font-variant:normal;}.orm sup {vertical-align:text-top;}.orm sub {vertical-align:text-bottom;}.orm input,.orm textarea,.orm select {font-family:inherit;font-size:inherit;font-weight:inherit;}.orm input,.orm textarea,.orm select {*font-size:100%;}.orm legend {color:#222;}
+/* fonts */
+.orm, .orm div, .orm h1, .orm h2, .orm h3, .orm h4, .orm h5, .orm p {font:12px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}.orm select,.orm input,.orm button,.orm textarea {font:99% arial,helvetica,clean,sans-serif;}.orm table {font-size:inherit;font:100%;}.orm pre,.orm code,.orm kbd,.orm samp,.orm tt {font-family:monospace;*font-size:108%;line-height:100%;}.orm .line:after,.orm .lastUnit:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.orm .line{*zoom:1;}
+.orm .unit{float:left;}
+.orm .size1of1{float:none;}
+.orm .size1of2{width:50%;}
+.orm .size1of3{width:33.33333%;}
+.orm .size2of3{width:66.66666%;}
+.orm .size1of4{width:25%;}
+.orm .size3of4{width:75%;}
+.orm .size1of5{width:20%;}
+.orm .size2of5{width:40%;}
+.orm .size3of5{width:60%;}
+.orm .size4of5{width:80%;}
+.orm .lastUnit{display:table-cell;float:none;width:auto;*display:block;*zoom:1;_position:relative;_left:-3px;_margin-right:-3px;}
+/* To overwrite styles from oreilly.com/styles/store.css */
+.orm h2 {
+float:none;
+display:block;
+}
+.orm div, .orm p, .orm li {
+font-size:100%;
+}
+
+
+/* To add space around .orm objects */
+.orm {
+overflow:hidden;
+}
+
+.orm.mt {
+margin-top:8px;
+}
+.orm.mr {
+margin-right:8px;
+}
+.orm.mb {
+margin-bottom:8px;
+}
+.orm.ml {
+margin-left:8px;
+}
+
+.orm .pagepadding {
+overflow:hidden;
+padding: 22px 0 22px 22px;
+}
+
+.orm .paddingtopleft {
+overflow:hidden;
+padding: 22px 0px 22px 22px;
+}
+
+
+/* Defaults for tags */
+.orm a {
+color:#207CC1;
+text-decoration:none;
+}
+.orm a:hover {
+text-decoration:underline;
+}
+.orm a.nolink {
+cursor: default;
+}
+
+.orm p {
+margin-bottom:10px;
+line-height:1.5em;
+}
+
+
+.orm .list-head {
+padding-top:10px;
+}
+
+.orm li {
+margin-bottom:3px;
+line-height:1.5em;
+overflow:hidden;
+}
+.orm .disc li {
+padding-left:10px;
+background: transparent url(https://shop.oreilly.com/images/oreilly/bullet-disc.png) left 6px no-repeat;
+}
+.orm .square li {
+padding-left:10px;
+background: transparent url(https://shop.oreilly.com/images/oreilly/bullet-square.png) left 6px no-repeat;
+}
+.orm .triangle li {
+padding-left:10px;
+background: transparent url(https://shop.oreilly.com/images/oreilly/bullet-triangle.png) left 6px no-repeat;
+}
+.orm .decimal li {
+padding-left:10px;
+list-style-type:decimal;
+}
+.orm .alpha li {
+padding-left:10px;
+list-style-type:upper-alpha;
+}
+
+.orm hr {
+clear:both;
+height:0;
+margin:15px 0;
+border:none;
+border-bottom:1px dashed #ddd;
+}
+
+
+
+/* Modularized Content */
+.orm .col {
+float:left;
+}
+
+.orm .row {
+overflow:hidden;
+margin:0 0 8px 0;
+}
+
+.orm .unit {
+}
+.orm .lastUnit {
+vertical-align:top;
+}
+
+.orm .module {
+margin:0 8px 0 0;
+overflow:hidden;
+}
+
+.orm .module p:last-child, .module li:last-child {
+margin-bottom:0;
+padding-bottom:0;
+}
+
+.orm .module .header {
+overflow:hidden;
+padding:7px 15px;
+}
+
+.orm .module .body {
+padding:12px 14px;
+overflow:auto;
+border:1px solid #ddd;
+border-top:none;
+}
+
+.orm .module .body.border-top {
+border-top:1px solid #ddd;
+}
+
+.orm .module .body.no-border {
+border:none;
+padding:12px 15px;
+}
+
+.orm .module .body.no-border.notp {
+border:none;
+padding-top:0;
+}
+
+.orm .module .body.full {
+padding:0;
+}
+
+.orm .media {
+padding-top:3px;
+}
+.orm .media.floatl {
+margin-right:10px;
+margin-bottom:10px;
+}
+.orm .media.floatr {
+margin-left:10px;
+margin-bottom:10px;
+}
+
+.orm .media.floatl.no-wrap {
+margin-right:10px;
+margin-bottom:0;
+}
+.orm .media.floatr.no-wrap {
+margin-left:10px;
+margin-bottom:0;
+}
+
+.orm .mt {
+margin-top: 8px;
+}
+.orm .mr {
+margin-right: 8px;
+}
+.orm .mb {
+margin-bottom: 8px;
+}
+.orm .ml {
+margin-left: 8px;
+}
+.orm .nm {
+margin:0px;
+}
+
+.orm .floatr {
+display:block;
+float:right;
+}
+.orm .floatl {
+display:block;
+float:left;
+}
+
+.orm .clear-both {
+clear:both;
+}
+
+
+.orm .w160 {
+width:160px;
+}
+.orm .w210 {
+width:210px;
+}
+.orm .w232 {
+width:232px;
+}
+.orm .w240 {
+width:240px;
+}
+.orm .w247 {
+width:247px;
+}
+.orm .w271 {
+width:271px;
+}
+.orm .w290 {
+width:290px;
+}
+.orm .w300 {
+width:300px;
+}
+.orm .w391 {
+width:391px;
+}
+.orm .w483 {
+width:483px;
+}
+.orm .w491 {
+width:491px;
+}
+.orm .w495 {
+width:495px;
+}
+.orm .w510 {
+width:510px;
+}
+.orm .w534 {
+width:534px;
+}
+.orm .w542 {
+width:542px;
+}
+.orm .w564 {
+width:564px;
+}
+.orm .w682 {
+width:682px;
+}
+.orm .w734 {
+width:734px;
+}
+.orm .w742 {
+width:742px;
+}
+.orm .w766 {
+width:766px;
+}
+.orm .w782 {
+width:782px;
+}
+.orm .w800 {
+width:800px;
+}
+
+.orm .h100 {
+height:100px;
+}
+.orm .h200 {
+height:200px;
+}
+.orm .h214 {
+height:214px;
+}
+.orm .h215 {
+height:215px;
+}
+.orm .h300 {
+height:300px;
+}
+.orm .h400 {
+height:400px;
+}
+.orm .h500 {
+height:500px;
+}
+
+
+
+
+/* Font Styles */
+.orm .fsxxxl {
+font-size:40px;
+}
+.orm .fsxxl {
+font-size:30px;
+}
+.orm .fsxl {
+font-size:24px;
+}
+.orm .fsl {
+font-size:16px;
+}
+.orm .fsm {
+font-size:12px;
+}
+.orm .fss {
+font-size:9px;
+}
+
+.orm .fsxxl .fsm {
+margin-top:18px;
+}
+.orm .fsxl .fsm {
+margin-top:12px;
+}
+.orm .fsl .fsm {
+margin-top:4px;
+}
+
+.orm .fwb, .orm strong {
+font-weight:bold;
+}
+.orm .fwn {
+font-weight:normal;
+}
+
+.orm em, .orm .em {
+font-style:italic;
+}
+
+.orm .fc-dark {
+color:#222;
+}
+.orm .fc-medium {
+color:#666;
+}
+.orm .fc-light {
+color:#fff;
+}
+.orm .fc-highlight {
+color:#990000;
+}
+.orm .fc-strata-red {
+color:#e51937;
+}
+
+.orm .tal {
+text-align:left;
+}
+.orm .tar {
+text-align:right;
+}
+.orm .tac {
+text-align:center;
+}
+
+
+
+
+/* Background Gradients */
+.orm .bg-blue {
+background-color:#4cabe8;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5fbefb', endColorstr='#4cabe8');
+background: -webkit-gradient(linear, left top, left bottom, from(#5fbefb), to(#4cabe8));
+background: -moz-linear-gradient(top,  #5fbefb,  #4cabe8);
+}
+.orm .bg-green {
+background-color:#b3d02e;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c6e347', endColorstr='#b3d02e');
+background: -webkit-gradient(linear, left top, left bottom, from(#c6e347), to(#b3d02e));
+background: -moz-linear-gradient(top,  #c6e347,  #b3d02e);
+}
+.orm .bg-yellow {
+background-color:#f3bf2f;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd242', endColorstr='#f3bf2f');
+background: -webkit-gradient(linear, left top, left bottom, from(#ffd242), to(#f3bf2f));
+background: -moz-linear-gradient(top,  #ffd242,  #f3bf2f);
+}
+.orm .bg-orange {
+background-color:#fc8800;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9b13', endColorstr='#fc8800');
+background: -webkit-gradient(linear, left top, left bottom, from(#ff9b13), to(#fc8800));
+background: -moz-linear-gradient(top,  #ff9b13,  #fc8800);
+}
+.orm .bg-red {
+background-color:#990000;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b21919', endColorstr='#990000');
+background: -webkit-gradient(linear, left top, left bottom, from(#b21919), to(#990000));
+background: -moz-linear-gradient(top,  #b21919,  #990000);
+}
+.orm .bg-purple {
+background-color:#a087f2;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b39aff', endColorstr='#a087f2');
+background: -webkit-gradient(linear, left top, left bottom, from(#b39aff), to(#a087f2));
+background: -moz-linear-gradient(top,  #b39aff,  #a087f2);
+}
+.orm .bg-gray {
+background-color:#ddd;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#dddddd');
+background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#dddddd));
+background: -moz-linear-gradient(top,  #f0f0f0,  #dddddd);
+}
+.orm .bg-lightgray {
+background-color:#ccc;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#efefef');
+background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#efefef));
+background: -moz-linear-gradient(top,  #fff,  #efefef);
+}
+.orm .bg-lightblue {
+background-color:#b9def6;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#97cff2', endColorstr='#b9def6');
+background: -webkit-gradient(linear, left top, left bottom, from(#97cff2), to(#b9def6));
+background: -moz-linear-gradient(top,  #97cff2,  #b9def6);
+}
+.orm .bg-lightgreen {
+background-color:#e1edad;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d3e485', endColorstr='#e1edad');
+background: -webkit-gradient(linear, left top, left bottom, from(#d3e485), to(#e1edad));
+background: -moz-linear-gradient(top,  #d3e485,  #e1edad);
+}
+.orm .bg-lightyellow {
+background-color:#fae6af;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8da86', endColorstr='#fae6af');
+background: -webkit-gradient(linear, left top, left bottom, from(#f8da86), to(#fae6af));
+background: -moz-linear-gradient(top,  #f8da86,  #fae6af);
+}
+.orm .bg-lightorange {
+background-color:#fdcba9;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdb07d', endColorstr='#fdcba9');
+background: -webkit-gradient(linear, left top, left bottom, from(#fdb07d), to(#fdcba9));
+background: -moz-linear-gradient(top,  #fdb07d,  #fdcba9);
+}
+.orm .bg-lightpurple {
+background-color:#dad1fa;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8b9f7', endColorstr='#dad1fa');
+background: -webkit-gradient(linear, left top, left bottom, from(#c8b9f7), to(#dad1fa));
+background: -moz-linear-gradient(top,  #c8b9f7,  #dad1fa);
+}
+.orm .bg-strata-red {
+background-color:#e51937;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e51937', endColorstr='#d41733');
+background: -webkit-gradient(linear, left top, left bottom, from(#e51937), to(#d41733));
+background: -moz-linear-gradient(top,  #e51937,  #d41733);
+}
+
+
+.orm .input .image {
+vertical-align:middle;
+}
+
+
+
+#primarynav li a  {
+font-family: Arial;
+}
+
+.orm .tabbed-content .body {
+float:left;
+height:298px;
+overflow:hidden;
+}
+.orm .tabbed-content .body li {
+display:block;
+overflow:hidden;
+margin-bottom:0;
+}
+.orm .tabbed-content .body li a {
+display:block;
+overflow:hidden;
+}
+.orm .tabs {
+width:14px;
+float:right;
+overflow:hidden;
+}
+.orm .tabs li {
+float:left;
+margin-bottom:2px;
+-moz-border-radius: 0 3px 3px 0;
+-webkit-border-radius: 0 3px 3px 0;
+border-radius: 0 3px 3px 0;
+}
+.orm .tabs li:last-child {
+margin-bottom:0;
+}
+.orm .tabs a {
+overflow:hidden;
+display:block;
+width:7px;
+width:14px\9;
+height:98px;
+border-right: 7px solid rgba(255, 255, 255, 0.2);
+}
+.orm .tabs a:hover {
+width:0;
+border-right: 14px solid rgba(255, 255, 255, 0.2);
+}
+.orm .tabs .selected, .orm .tabs .selected:hover {
+width:0;
+width:7px\9;
+border-right: 7px solid rgba(255, 255, 255, 0.2);
+}
+
+.orm .tabbed-content.h215 .tabs li {
+height:70px;
+}
+.orm .tabbed-content.h215 .tabs li:last-child {
+height:71px;
+}
+
+.orm .border {
+border-left: 1px solid #CCC;
+padding-left: 10px;
+}
+
+.orm .w240 .module img {
+max-width:202px;
+}
+
+.orm .pagepadding .w682 {
+padding-right:15px;
+}
+
+.orm .pagepadding .module {
+padding-bottom:15px;
+}
+
+.orm .w240 .module img {
+max-width:202px;
+}
+
+.orm .row.w742 {
+overflow:hidden;
+background: transparent url(http://oreilly.com/images/oreilly/row-742-border.png) left bottom repeat-x;
+}
+.orm .row.w742 .body {
+border:none;
+padding-right:15px;
+padding-left:15px;
+}
+.orm .row.w742.publishers {
+width:734px;
+padding-right:8px;
+background:none;
+}
+.orm .row.match982 {
+overflow:hidden;
+background: transparent url(http://oreilly.com/images/oreilly/row-982-border.png) left bottom repeat-x;
+}
+.orm .row.match982 .body {
+border:none;
+border-top:1px solid #ddd;
+padding-right:15px;
+padding-left:15px;
+}
+
+.orm .popular-topics {
+background: transparent url(http://oreilly.com/images/oreilly/explorer.png) right bottom no-repeat;
+}
+.orm .popular-topics .media {
+margin-bottom:0;
+margin-right:20px;
+}
+
+
+/* Subnav for the ML O'Reilly Homepage */
+.orm .subnav {
+padding:0 0 0 10px;
+width:980px;
+overflow:hidden;
+border-bottom:1px solid #ddd;
+}
+.orm .subnav .item {
+display:block;
+float:left;
+padding:6px 10px 6px 0;
+font-size:13px;
+line-height:19px;
+color:#666;
+}
+.orm .subnav a.item {
+color:#990000;
+}
+.orm .subnav a.item:hover {
+color:#222;
+text-decoration:none;
+}
+
+.orm .subnav .social {
+float:right;
+width:135px;
+padding:6px 0;
+line-height:19px;
+overflow:hidden;
+text-align:right;
+}
+.orm .subnav .social img {
+float:left;
+margin:0 7px 0 0;
+}
+
+.orm .dotd-fixed {
+height:93px;
+overflow:hidden;
+}
+.orm .dotd-fixed .book-cover {
+max-height:90px;
+max-width:90px;
+padding-top:3px;
+margin:0 10px 0 0;
+}
+
+/* Power Reviews Stars on Directory Pages */
+
+.orm .pr-snippet {
+margin:0 0 4px 0;
+}
+.orm .pr-snippet .pr-snippet-wrapper {
+padding:0;
+background:none;
+border:none;
+}
+.orm .pr-snippet .pr-snippet-stars {
+margin:0;
+padding:0;
+border:none;
+float:none;
+}
+.orm .pr-snippet .pr-snippet-review-count {
+display:none;
+}
+.orm .pr-snippet .pr-snippet-read-write {
+display:none;
+}
+
+/* Power Reviews Stars on Directory Pages */
+.thumbtext .pr-snippet {
+margin:0 0 4px 0;
+}
+.thumbtext .pr-snippet .pr-snippet-wrapper {
+padding:0;
+background:none;
+border:none;
+}
+.thumbtext .pr-snippet .pr-snippet-stars {
+margin:0;
+padding:0;
+border:none;
+float:none;
+}
+.thumbtext .pr-snippet .pr-snippet-review-count {
+display:none;
+}
+.thumbtext .pr-snippet .pr-snippet-read-write {
+display:none;
+}
+
+
+.orm #example_form {
+padding-bottom:3px;
+}
+
+/* The Vertical MyBuys Zone Headers */
+.orm .mbzone2 .mblegend {
+border:none;
+padding:0;
+}
+.orm .mbzone2 .mbzonetitle {
+font-size:16px;
+overflow:hidden;
+padding:7px 15px;
+border:none;
+background-color:#ddd;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#dddddd');
+background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#dddddd));
+background: -moz-linear-gradient(top,  #f0f0f0,  #dddddd);
+}
+.orm .mbzone2 .mbitem {
+margin:10px 0;
+}
+
+
+/* The New  Version of the Publisher Grid on the Store Home */
+.orm .publisher-grid {
+width:734px;
+}
+.orm .publisher-grid table {
+border-top:1px solid #ddd;
+border-left:1px solid #ddd;
+}
+.orm .publisher-grid td {
+border-right:1px solid #ddd;
+border-bottom:1px solid #ddd;
+}
+.orm .publisher-grid td.empty {
+border:none;
+}
+.orm .publisher-grid a {
+display:block;
+width:103px;
+height:103px;
+}
+.orm .publisher-grid a.text {
+padding:33px 5px 0 5px;
+width:93px;
+height:70px;
+font-weight:bold;
+color:#444;
+text-align:center;
+font-size:16px;
+}
+.orm .publisher-grid a.text:hover {
+color:#000;
+text-decoration:none;
+}
+.orm .publisher-grid a.jist {background:transparent url(http://cdn.oreilly.com/oreilly/ml/publisher-grid/jist-103.png) 0 0 no-repeat;}
+.orm .publisher-grid a.nostarch {background:transparent url(http://cdn.oreilly.com/oreilly/ml/publisher-grid/nostarch-103.png) 0 0 no-repeat;}
+.orm .publisher-grid a.oreilly {background:transparent url(http://cdn.oreilly.com/oreilly/ml/publisher-grid/oreilly-103.png) 0 0 no-repeat;}
+.orm .publisher-grid a.pcpublishing {background:transparent url(http://cdn.oreilly.com/oreilly/ml/publisher-grid/pc-publishing-103.png) 0 0 no-repeat;}
+.orm .publisher-grid a.pragmatic {background:transparent url(http://cdn.oreilly.com/oreilly/ml/publisher-grid/pragmatic-103.png) 0 0 no-repeat;}
+.orm .publisher-grid a.rockynook {background:transparent url(http://cdn.oreilly.com/oreilly/ml/publisher-grid/rockynook-103.png) 0 0 no-repeat;}
+.orm .publisher-grid a.rosenfeld {background:transparent url(http://cdn.oreilly.com/oreilly/ml/publisher-grid/rosenfeld-103.png) 0 0 no-repeat;}
+.orm .publisher-grid a.sitepoint {background:transparent url(http://cdn.oreilly.com/oreilly/ml/publisher-grid/sitepoint-103.png) 0 0 no-repeat;}
+.orm .publisher-grid a.tidbits {background:transparent url(http://cdn.oreilly.com/oreilly/ml/publisher-grid/tidbits-103.png) 0 0 no-repeat;}
+.orm .publisher-grid a.wrox {background:transparent url(http://cdn.oreilly.com/oreilly/ml/publisher-grid/wrox-103.png) 0 0 no-repeat;}
+.orm .publisher-grid a.youngjin {background:transparent url(http://cdn.oreilly.com/oreilly/ml/publisher-grid/youngjin-103.png) 0 0 no-repeat;}
+.orm .publisher-grid a:hover {background-position:-150px 0;}
+
+
+
+.orm .product-slider {
+padding-bottom:15px;
+overflow:hidden;
+border-right:1px solid #eee;
+border-left:1px solid #eee;
+background:#eee url(images/gray-stripes.jpg) 0 0 repeat;
+}
+.orm .product-slider .left {
+height:20px;
+width:11px;
+float:left;
+margin-top:3px;
+background: transparent url(images/slider-arrow-left.png) -20px 0 no-repeat;
+}
+.orm .product-slider .right {
+height:20px;
+width:11px;
+float:left;
+margin-top:3px;
+margin-left:10px;
+background: transparent url(images/slider-arrow-right.png) 0 0 no-repeat;
+}
+.orm .product-slider .body {
+position:relative;
+height:120px;
+overflow:hidden;
+padding-top:0;
+padding-bottom:0;
+}
+.orm .product-slider .right, .product-slider .left, .product-slider .src, .product-slider .alt, .product-slider .item-info {
+display: none;
+}
+.orm .product-slider .item {
+display:block;
+float:left;
+height:120px;
+overflow:hidden;
+margin-right:15px;
+}
+.orm .product-slider .item img {
+margin-right:-5px;
+}
+.orm .product-slider .item-info {
+width:220px;
+padding:8px;
+background-color:#fff;
+border:1px solid #ddd;
+}
+.orm .product-slider .show-info {
+display:block;
+position:absolute;
+}
+.orm .product-slider .special {
+color:#990000;
+}
+
+
+.orm .price-strike {text-decoration:line-through;}
+
+.orm #twitter_update_list li {
+line-height:1.2em;
+margin-bottom:.5em;
+}
+.orm #twitter_update_list li a {
+display:block;
+}
+.orm #twitter_update_list li span a {
+display:inline;
+}
+
+.orm .blurb {
+overflow:hidden;
+margin:0 0 15px 0;
+}
+
+
+.orm .scrollable-list {
+height: 206px;
+overflow: hidden;
+position: relative;
+}
+.orm .scrollable-list.no-nav {
+height: 178px;
+overflow: hidden;
+position: relative;
+}
+
+/* Item Lists Nav Links */
+.orm .scrollable-list .title-list-nav {
+height: 28px;
+padding: 0 15px;
+background: transparent url(http://oreilly.com/images/title-scroll/item-list-nav-bg.png) left bottom repeat-x;
+}
+.orm .scrollable-list.no-nav .title-list-nav {
+height:0;
+overflow:hidden;
+left:-9999px;
+}
+
+.orm .scrollable-list .title-list-nav h3 {
+float: left;
+font-size: 16px;
+font-weight: normal;
+margin: 0 22px 0 0;
+padding: 7px 0 0 0;
+line-height:16px;
+}
+.orm .scrollable-list .title-list-nav ul {
+float: left;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.orm .scrollable-list .title-list-nav li {
+float: left;
+margin: 0;
+padding: 0;
+text-transform: uppercase;
+background: transparent url(http://oreilly.com/images/title-scroll/item-list-divider.png) left bottom no-repeat;
+}
+.orm .scrollable-list .title-list-nav li a {
+display: block;
+padding: 5px 10px 0 9px;
+margin: 2px 0 0 1px;
+line-height: 19px;
+border-top: 1px solid #fff;
+color: #444;
+}
+.orm .scrollable-list .title-list-nav li a:hover {
+color: #990000;
+text-decoration: none;
+}
+.orm .scrollable-list .title-list-nav li a.selected {
+padding: 6px 10px 0 9px;
+margin: 1px 0 0 1px;
+background-color: #f4f4f4;
+border-top: 1px solid #eee;
+color: #990000;
+text-decoration: none;
+}
+.orm .scrollable-list .title-list-nav li a:focus {
+outline: 0;
+}
+/* Item Lists Sublist */
+.orm .scrollable-list .item-sublist {
+height: 164px;
+width: 2000px;
+position: absolute;
+top: -1000px;
+left: 0;
+margin: 28px 0 0 28px;
+visibility: hidden;
+}
+.orm .scrollable-list.no-nav .item-sublist {
+margin-top:0;
+}
+.orm .scrollable-list .item-sublist .item {
+display: block;
+height:120px;
+float: left;
+margin:0 20px 0 0;
+padding:22px 0;
+_width: 0;
+}
+.orm .scrollable-list .item-sublist .item img {
+height: 120px;
+}
+
+.orm .scrollable-list .item-sublist .item .src {
+display: none;
+}
+.orm .scrollable-list .item-sublist .item .alt {
+display: none;
+}
+.orm .scrollable-list .item-sublist .item.more a {
+display:block;
+height:120px;
+width:57px;
+float: left;
+margin:0 20px 0 0;
+padding:22px 0;
+_width: 0;
+background:transparent url(https://shop.oreilly.com/images/oreilly/slider-more-link.png) 0 0 no-repeat;
+}
+
+.orm .scrollable-list .item-sublist .item-info {
+display: none;
+}
+.orm .scrollable-list .item-sublist .show-info {
+display: block;
+padding: 10px;
+width: 180px;
+position: absolute;
+background-color: #fffaea;
+border: 1px solid #ffe09c;
+border-radius: 10px;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+z-index:1;
+}
+.orm .scrollable-list .price-strike {
+text-decoration: line-through;
+}
+.orm .scrollable-list .item-sublist .show-info a {
+color: #222;
+}
+.orm .scrollable-list .item-sublist .show-info .item-title {
+font-weight: bold;
+}
+.orm .scrollable-list .item-sublist .show-info .special {
+color:#990000;
+}
+/* Item Lists Sublist Scrolling */
+.orm .scrollable-list .left {
+height: 164px;
+width: 28px;
+float: left;
+position: absolute;
+z-index: 1;
+background: transparent url(http://oreilly.com/images/title-scroll/item-list-left-bg.png) left top repeat-y;
+}
+.orm .scrollable-list .left a {
+display: block;
+width: 28px;
+height: 26px;
+margin: 69px 0 0 0;
+background: transparent url(http://oreilly.com/images/title-scroll/item-list-left-arrow.png) 9px 0 no-repeat;
+}
+.orm .scrollable-list .left a:focus {
+outline: 0;
+}
+.orm .scrollable-list .left a:hover {
+background: transparent url(http://oreilly.com/images/title-scroll/item-list-left-arrow.png) 9px -26px no-repeat;
+}
+.orm .scrollable-list .right {
+height: 164px;
+width: 28px;
+right: 0;
+position: absolute;
+z-index: 1;
+background: transparent url(http://oreilly.com/images/title-scroll/item-list-right-bg.png) right top repeat-y;
+}
+.orm .scrollable-list .right a {
+display: block;
+width: 28px;
+height: 26px;
+margin: 69px 0 0 0;
+background: transparent url(http://oreilly.com/images/title-scroll/item-list-right-arrow.png) 10px 0 no-repeat;
+}
+.orm .scrollable-list .right a:hover {
+background: transparent urlhttp://oreilly.com/images/title-scroll/item-list-right-arrow.png) 10px -26px no-repeat;
+}
+
+.orm .scrollable-list .right a:focus {
+outline: 0;
+}
+.orm .scrollable-list .scroll {
+height: 14px;
+width: 100%;
+margin: 164px 0 0 0;
+background: #e9e9e9 url(http://oreilly.com/images/title-scroll/item-list-scroll-bg.png) left bottom repeat-x;
+position: absolute;
+}
+.orm .scrollable-list .scroll a {
+display: block;
+width: 30px;
+height: 14px;
+position: absolute;
+background: transparent url(http://oreilly.com/images/title-scroll/item-list-scroll-handle.png) 3px top no-repeat;
+}
+.orm .scrollable-list .scroll a:focus {
+outline: 0;
+}
+
+/* Get Satisfaction */
+.orm .gsfn_topic_list {
+padding:8px 0;
+border-bottom:1px dashed #ddd;
+}
+
+.orm .gsfn_submit {
+margin-top:8px;
+}
+
+/* Form and Button Styles */
+.orm form input.email_address {
+vertical-align:top;
+height:18px;
+width:119px;
+float:left;
+margin-right:2px;
+}
+
+.orm form input.getsatisfaction {
+vertical-align:top;
+height:18px;
+width:120px;
+float:left;
+margin-right:2px;
+font-size: 11px;
+color: #999;
+}
+
+.orm form input.long {
+width: 130px;
+font-size: 11px;
+color: #999;
+}
+.orm fieldset {
+padding-top:4px;
+}
+
+.orm button.skinny {
+margin-bottom:0;
+margin-right:0;
+padding:3px 7px;
+}
+
+.orm button, .orm .button {
+background: -webkit-gradient(linear, 0% 45%, 0% 55%, from(#FBDF73), to(#FAD441));
+background: -moz-linear-gradient(0% 45% 270deg, #FBDF73, #FAD441, #FAD441 55%);
+background-color: #FAD441;
+border: 1px solid #F9C90F;
+font-weight: bold;
+display: inline-block;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+padding: 4px 10px;
+color: black;
+margin: 0px 4px 8px 0;
+}
+.orm  button:hover, .orm .button:hover, .orm .button-on:hover  {
+text-decoration:none;
+cursor:pointer;
+opacity:.85;
+}
+.orm .button-on , .orm .button-off {
+font-weight:bold;
+font-size: 15px;
+color:black;
+padding:12px 0 0 40px;
+display:block;
+width: 162px;
+height:40px;
+}
+.orm .button-off:hover {
+text-decoration:none;
+cursor:default;
+}
+.orm .button-on span.sub, .orm .button-off span.sub {
+font-size:12px;
+top: -2px;
+position: relative;
+font-weight: normal;
+display:block;
+}
+
+.orm .itunes.button-on {
+background: url(http://cdn.oreilly.com/oreilly/apps/btn-app-store.png) no-repeat 0 0;
+}
+
+.orm .itunes.button-off {
+background: url(http://cdn.oreilly.com/oreilly/apps/btn-app-store.png) no-repeat 0  -52px;
+}
+
+.orm .android.button-on {
+background: url(http://cdn.oreilly.com/oreilly/apps/btn-android-market.png) no-repeat 0 0;
+}
+
+.orm .android.button-off {
+background: url(http://cdn.oreilly.com/oreilly/apps/btn-android-market.png) no-repeat 0  -52px;
+}
+
+
+.orm .mspress-header {
+padding:11px 15px;
+border-bottom:1px solid #f3f3f3;
+font-size:18px;
+line-height:25px;
+background-color:#fff;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#ffffff');
+background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#ffffff));
+background: -moz-linear-gradient(top,  #f5f5f5,  #ffffff);
+}
+.orm .mspress-header .img {
+padding-top:4px;
+}
+
+
+.orm .ml-left-nav {
+width:192px;
+background-color:#f3f3f3;
+}
+.orm .ml-left-nav a {
+display:block;
+padding:0 5px 0 15px;
+border-bottom:1px solid #ddd;
+line-height:25px;
+color:#333;
+}
+.orm .ml-left-nav a:hover {
+text-decoration:none;
+color:#990000;
+}
+.orm .ml-left-nav a.selected {
+color:#990000;
+}
+.orm .ml-left-nav a.top {
+padding:12px 5px 12px 15px;
+border-bottom:none;
+font-size:22px;
+line-height:22px;
+}
+.orm .ml-left-nav a .sub {
+display:block;
+padding-left:15px;
+}
+.orm .ml-left-nav h3 {
+border-top:3px solid #fff;
+padding:12px 5px 5px 15px;
+font-size:16px;
+color:#990000;
+}
+
+#video-preview {
+padding: 0;
+margin: 0 auto 15px auto;
+text-align: left;
+}
+
+#video-preview iframe {
+width: 690px !important;
+overflow:hidden;
+}
+#video-preview embed {
+width: 690px !important;
+overflow:hidden;
+}
+#video-preview object {
+width: 690px !important;
+overflow:hidden;
+}
+
+
+/* Direcory Page Header */
+.directoryCategoryHeader {
+padding-top:0 !important;
+}
+
+/* Direcory Page Header */
+.directoryCategoryHeader {
+padding-top:0 !important;
+}
+
+
+/* Tabbed Box Content*/
+.rollup {
+background:#FFFFFF url(http://oreilly.com/images/icons/arrow.gif) no-repeat scroll left center;
+padding-left:12px !important;
+}
+
+.rolldown {
+background:#F6F6F6 url(http://oreilly.com/images/icons/arrow_down.gif) no-repeat scroll left center;
+padding-left:12px !important;
+}
+
+.showSwitch {
+display: block;
+}
+
+.hideSwitch {
+display: none;
+}
+
+#description {
+margin: 0 0 22px 0;
+padding: 0;
+clear: left;
+}
+
+.content-subtitle {
+clear: left;
+color: #333333;
+font-size: 16px;
+font-weight: normal;
+line-height: 20px;
+margin: 0;
+padding: 0;
+}
+
+#colophon .content-subtitle {
+display: none;
+}
+
+.relatedContent .content-subtitle {
+margin-bottom: 11px;
+}
+
+list-head {
+padding-top:10px;
+}
+
+#dvd-description {
+margin: 0 0 22px 0;
+padding: 0 0 11px 0;
+border-bottom: 1px solid #CCCCCC;
+clear: left;
+}
+
+#short-description {
+margin: 7px 0 11px 0;
+padding: 0;
+}
+
+a#fulldescButton {
+display: none;
+}
+
+#page-toc {
+border-bottom: 1px solid #CCCCCC;
+padding: 0 0 10px 0;
+margin: 11px 0 15px 0;
+min-height: 30px;
+width: 400px;
+_width: 375px;
+clear: left;
+float: left;
+}
+
+
+#toc {
+padding: 0;
+margin: 0 0 15px 0;
+clear:both;
+}
+
+#toc-content {
+margin: 7px 0 2px 0;
+padding: 0;
+}
+
+#toc-content h3, #toc-content h4 {
+font-size: 11px;
+display: inline;
+}
+
+#toc-content h4 {
+font-weight: normal;
+}
+
+#toc-content .thumb img {
+float: right;
+margin: 5px 0 5px 5px;
+width: 50px;
+}
+
+div.description {
+margin: 3px 3px 3px 15px;
+border: none;
+font-weight: normal;
+padding: 0;
+}
+
+#related-links {
+margin: 11px 0 0 0;
+border: 1px solid #DDD;
+clear: both;
+}
+
+#related-links ul {
+padding: 0 16px;
+list-style-type: none;
+}
+
+#related-links ul li {
+padding-bottom: 8px;
+}
+
+#related-links ul li a {
+padding-bottom: 8px;
+font-size: 12px;
+font-weight: normal;
+color: #207CC1;
+text-decoration: none;
+}
+
+#related-links li.strong a {
+font-weight: bold;
+}
+
+#related-links .box-heading {
+background: url("http://shop.oreilly.com/images/oreilly/en_us/local/localgraphics/tabgradient_bg.gif") #F4F4F4;
+border-bottom: 1px solid #DDD;
+padding: 8px 16px;
+font-size: 13px;
+color: #333;
+}
+
+/* To make the product information boxes expandable up to a max-height of 275px; */
+.infoTabs #tabContentFixer {
+height:auto !important;
+max-height:275px;
+}
+
+.infoTabs #tabContentFixer #tabContent {
+height:auto !important;
+max-height:255px;
+line-height:1.4em;
+}
+
+#chapters li.video-chapter {
+border-bottom: 1px solid #DEDEDE;
+padding: 3px 7px;
+position: relative;
+font-weight: bold;
+}
+
+#chapters .part li.video-chapter {
+border-bottom: 1px solid #DEDEDE;
+font-weight:bold;
+padding: 3px 7px 3px 34px;
+position:relative;
+}
+
+#chapters .part .video-chapter h3 {
+display: inline;
+font-size: 11px;
+border: 0;
+padding: 0;
+}
+
+h3 .chapter-label:after, h4 .chapter-label:after, #chapters video-chapter h3 .chapter-label:after {
+	content: ': ';
+}
+
+#chapters .part h3, #toc-content .appendix h3, #toc-content .colophon h3, #toc-content .preface h3 {
+border-bottom: 1px solid #DEDEDE;
+padding: 3px 7px;
+position: relative;
+font-weight: bold;
+display: block;
+margin: 0;
+}
+
+#chapters .part .chapter h4, #chapters .part .appendix h4, #chapters .part .preface h4 {
+border-bottom: 1px solid #DEDEDE;
+position: relative;
+font-weight: bold;
+padding: 3px 7px 3px 34px;
+display: block;
+margin: 0;
+}
+
+
+#chapters .part li.sect1, #chapters li.sect1 h4, #chapters .section h4, #appendixes .appendix h4, #toc-content .appendix h4  {
+padding: 3px 3px 3px 75px;
+margin: 0;
+/*width:668px;*/
+display: block;
+margin: 0;
+border-bottom: 1px solid #DEDEDE;
+}
+
+#chapters .section .section, #appendixes .section .section {
+padding: 3px 3px 3px 100px;
+margin: 0;
+display: block;
+margin: 0;
+border-bottom: 1px solid #DEDEDE;
+}
+
+#chapters .section .section li {
+padding: 3px 3px 3px 25px;
+margin: 0;
+border: none;
+width: auto;
+}
+
+#chapters .section .section li li {
+padding: 3px 3px 3px 25px;
+margin: 0;
+border: 0;
+display: block;
+width: auto;
+}
+
+#chapters .chapter h3 {
+border-bottom: 1px solid #DEDEDE;
+padding: 3px 7px;
+position: relative;
+font-weight: bold;
+display: block;
+margin: 0;
+}
+
+
+#toc-content ol {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+#toc .time {
+padding: 0;
+margin: 0;
+font-weight: normal;
+position: absolute;
+right: 10px;
+}
+
+.ie6 #toc .time {
+right: 30px;
+}
+
+#toc .full-toc-button, #toc .close-toc-button {
+padding: 0 0 0 1px;
+margin: 0;
+}
+
+
+#tabContent dl, #tabContent dt, #tabContent dd {
+float:left;
+padding: 0;
+white-space:nowrap;
+margin:2px 0;
+}
+
+#tabContent dd, #tabContent dt.isbn-10 {
+margin-left: 5px;
+}
+
+#tabContent dd {
+clear: right;
+}
+
+#tabContent dt {
+clear:left;
+}
+
+#tabContent dt.isbn-10 {
+clear:none;
+}
+
+#tabContent dd ul {
+list-style:none;
+margin:0;
+padding:0;
+}
+
+#tabContent dd ul li {
+display:inline;
+border-spacing:0px;
+}
+
+#tabContent dd ul li:after {
+content:",";
+}
+#tabContent dd ul li.last:after {
+content:"";
+}
+
+#tabContent dd cite {
+font-weight: bold;
+font-style: normal;
+white-space: normal;
+display: inline-block;
+width: 600px;
+}
+
+/* Author Bios */
+
+.author-bio {
+margin: 0 0 16px 0;
+list-style: none;
+padding: 0 25px 0 15px;
+}
+
+.author-bio h3{
+margin: 0 0 6px 0;
+}
+
+.author-bio p{
+margin: 0;
+padding-bottom:5px;
+}
+
+.infoTabContent ol {
+padding: 0px;
+}
+
+/* Subnav */
+sf-menu ul {
+float: none;
+display: none;
+visibility: hidden;
+}
+sf-menu ul li {
+float: left; 
+width: 100%; 
+white-space: normal; 
+}
+
+/* Fixes a display error in IE9 */
+.sf-menu li {
+background-color:transparent !important;
+}
+.sf-menu li ul li {
+background-color:transparent !important;
+}
+
+
+#sf-menu-text-nav .sf-menu li div.right {
+float:right;
+font-size: 13px;
+}
+
+#sf-menu-text-nav .sf-menu li div a {
+font-size: 13px;
+}
+#sf-menu-text-nav .sf-menu li div a.right {
+display: inline;
+float: left;
+border-right: 0;
+padding-right: 4px;
+}
+li.right {
+padding-right: 10px;
+width: 135px;
+}
+
+/*Video TOC */
+#toc .content-subtitle .options {
+	font-size: 11px;
+	font-weight: bold;
+	display: block;
+	width: 100px;
+	float: right;
+	padding: 0 0 0 10px;
+}
+
+#toc-content {
+	margin:0;
+}
+
+#toc-content .chapter-title {
+	display: block;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #dedede;
+	padding: 3px 0 3px 7px;
+}
+
+#toc-content .chapter-title .chapter-label {
+	color: #222;
+	font-weight: bold;
+	width: 600px;
+}
+
+#toc-content a.chapter-label, #toc-content a.chapter-label:hover {
+	text-decoration: none;	
+}
+
+#toc-content .video-examples {
+	padding: 3px 0 3px 27px;
+	display: none;
+}
+
+#toc-content .chapter-title .description {
+	width: 600px;
+	margin: 3px 0 0 0;
+	padding: 0;
+	font-size: 10px;
+	line-height: 14px;
+	display: none;
+}
+
+#toc-content .video-entry {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #dedede;
+}
+
+#toc-content ol .video-entry .video-title {
+	display: block;
+	float: left;
+	width: 480px;
+	padding: 3px 0 3px 7px;
+}
+
+#toc-content ol ol .video-entry .video-title {
+	width: 480px;
+	padding: 3px 0 3px 27px;
+}
+
+#toc-content ol ol .video-entry .video-title p {
+	margin: 0;
+	padding: 0;
+}
+
+#toc-content .video-entry .options {
+	display: block;
+	width: 100px;
+	float: right;
+	padding: 3px 0 3px 10px;
+}
+
+
+#toc-content .clear {
+	display: block;
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+
+/*publisher pages*/
+.orm img.pubicon {padding-top: 10px; padding-right: 10px; padding-bottom: 10px; float: right;}
+.orm #topic {clear: left; color: #000000; display: block; font-size: 20px; line-height: 26px; margin: 0; padding: 0;}
+.orm p.tagline {clear: left; color: #333333; font-family: Verdana,helvetica,arial,sans-serif; font-size: 14px; margin: 0 0 8px; padding: 0; text-align: left;}
+
+
+
+/*Temp Webcasts Styling*/
+
+#webcasts p {
+  margin:1em 0;
+}
+
+/* styles for search autocomplete */
+#search-box fieldset {
+border: none;
+padding: 0;
+}
+
+#autocomplete {
+top: 0;
+left: 0px !important;
+width: 210px !important;
+}
+#autocomplete .yui-ac-content {
+padding: 3px !important;
+}
+
+.yui-skin-sam .yui-ac {
+    position:relative;font-family:arial;font-size:100%;
+}
+.yui-skin-sam .yui-ac-input {
+    width:20em;
+}
+.yui-skin-sam .yui-ac-container {
+    top:1.6em;width:20em;
+}
+.yui-skin-sam .yui-ac-content {
+    position:absolute;width:20em;border:1px solid #808080;background-color:#fff;overflow:hidden;z-index:9050;
+}
+.yui-skin-sam .yui-ac-shadow {
+    position:absolute;margin:.3em;width:100%;background:#000;-moz-opacity: 0.10;opacity:.10;filter:alpha(opacity=10);z-index:9049;
+}
+.yui-skin-sam .yui-ac-content ul{
+    margin:0;padding:0;width:20em;
+}
+.yui-skin-sam .yui-ac-content li {
+    margin:0;padding:2px 5px;cursor:default;white-space:nowrap;
+}
+.yui-skin-sam .yui-ac-content li.yui-ac-prehighlight {
+    background:#B3D4FF;
+}
+.yui-skin-sam .yui-ac-content li.yui-ac-highlight {
+    background:#0000FF;color:#FFF;
+}
+
+/* Power Reviews Fix */
+
+.pr-review-content-header {
+display: none;
+}
+
+#home .globalCartBasketInfo a {
+text-decoration: none;
+}
+
+#home .globalCartBasketInfo a:hover {
+text-decoration: underline;
+}
+
+.orm .top-cats {
+margin-right: 0;
+}
+
+.orm .top-cats ul.body {
+padding: 0;
+border: none;
+border-left: 1px solid #ddd;
+}
+
+.orm .top-cats li {
+margin: 0;
+display:table-cell;
+vertical-align:middle;
+padding: 4px; 
+width: 137px; 
+border-width: 0 1px 1px 0; 
+border-style: solid; 
+border-color: #ddd;
+}
+
+.orm .top-cats li a {
+display: block;
+line-height: 14px;
+margin-left: 8px;
+padding: 10px;
+background: url(http://cdn.oreilly.com/oreilly/images/category-arrow.png) no-repeat 0 center transparent;
+}
+
+.orm .top-cats .cat-3 {
+width: 140px;
+}
+
+.orm .top-cats .long-cat a {
+padding: 3px 10px;
+}
+
+.orm .sm-promos {
+margin: 16px 0;
+}
+
+.orm .sm-promos a {
+display: block;
+float: left;
+}
+
+.orm .sm-promos .promo-1, .orm .sm-promos .promo-2 {
+margin-right: 16px;
+}
+
+/* To hide ML breadcrumbs */
+.mainLayoutTable .breadcrumb, .mainLayoutTable .breadcrumb a:link, .mainLayoutTable .breadcrumb a:active, .mainLayoutTable .breadcrumb a:visited { color:#fff !important; }
